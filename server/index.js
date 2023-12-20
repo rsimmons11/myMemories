@@ -31,6 +31,10 @@ app.use(flash());
 app.use('/posts', postRoutes);
 app.use("/user", userRouter);
 
+app.get('/', (req, res) => {
+  res.send('APP IS RUNNING')
+})
+
 const PORT = process.env.PORT|| 5000;
 
 console.log('Connection URL:', process.env.CONNECTION_URL);
