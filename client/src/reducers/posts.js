@@ -1,8 +1,8 @@
 import { FETCH_ALL, FETCH_BY_SEARCH, FETCH_BY_CREATOR, FETCH_POST, CREATE, UPDATE, DELETE, LIKE, COMMENT } from '../constants/actionTypes';
 
 export default (state = { isLoading: true, posts: [] }, action) => {
-  console.log('Reducer Action:', action);  // Log the action
-  console.log('Reducer State:', state);   // Log the state
+  console.log('Reducer Action:', action);// Log the action
+  console.log('Reducer State:', state);// Log the state
 
   switch (action.type) {
     case 'START_LOADING':
@@ -27,7 +27,7 @@ export default (state = { isLoading: true, posts: [] }, action) => {
       return {
         ...state,
         posts: state.posts.map((post) => {
-          if (post._id == +action.payload._id) {
+          if (post._id === +action.payload._id) {
             return action.payload;
           }
           return post;

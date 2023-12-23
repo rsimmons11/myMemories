@@ -44,6 +44,7 @@ const Post = ({ post, setCurrentId }) => {
     return <><ThumbUpAltOutlined fontSize="small" />&nbsp;Like</>;
   };
 
+  /* eslint-disable no-unused-vars */
   const openPost = (e) => {
     // dispatch(getPost(post._id, history));
 
