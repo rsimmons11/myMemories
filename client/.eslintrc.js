@@ -18,11 +18,19 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   plugins: [
     'react',
   ],
   rules: {
+    // Adjust the consistent-return rule
+    'consistent-return': [
+      'error',
+      {
+        // Allow arrow functions to not always have a return statement
+        treatUndefinedAsUnspecified: true,
+      },
+    ],
     'import/extensions': 0,
     'react/prop-types': 0,
     'linebreak-style': 0,
