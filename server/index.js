@@ -36,6 +36,7 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.PORT|| 5000;
+const CONNECTION_URL = "mongodb+srv://ptgrd1980:0EUCPZIN444L9TS8@cluster0.mdbwvgu.mongodb.net/?retryWrites=true&w=majority"
 
 console.log('Connection URL:', process.env.CONNECTION_URL);
 console.log('PORT:', PORT);
