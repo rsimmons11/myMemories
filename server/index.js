@@ -36,12 +36,11 @@ app.get('/', (req, res) => {
 })
 
 const PORT = process.env.PORT|| 5000;
-const CONNECTION_URL = "mongodb+srv://ptgrd1980:0EUCPZIN444L9TS8@cluster0.mdbwvgu.mongodb.net/?retryWrites=true&w=majority"
 
 console.log('Connection URL:', process.env.CONNECTION_URL);
 console.log('PORT:', PORT);
 
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.CONNECTION_URL)
   .then(() => app.listen(PORT, () => console.log(`Server Running on Port: http://localhost:${PORT}`)))
   .catch((error) => console.log(`${error} did not connect`));
 
